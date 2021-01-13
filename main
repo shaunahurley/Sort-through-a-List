@@ -40,4 +40,5 @@ public class Sort
             logger.log(Level.INFO, listToBeSorted.sort());
         }
     }
+}
         
