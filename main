@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+import java.utill.logging.Logger;
+import java.util.logging.Level;
+import java.util.Scanner;
+
+public class Sort
+{
+    public static void main(String[] args)
+    {
+    
+    private ArrayList<Object> listToBeSorted;
+    pivate Logger logger = Logger.getLogger(Sort.class.getName());
+    
+    public Sort(ArrayList<Object> listToBeSorted)
+    {
+        this.listToBeSorted = listToBeSorted;
+    }
+    public void sortArrayList()
+    {
+        if(listToBeSorted==null)
+        {
+            logger.log(Level.WARNING, "The ArrayList is null");
+        }
+        else if(listToBeSorted.size()<=1)
+        {
+            int size = listToBeSorted.size();
+            switch(size)
+            {
+                case 0:
+                    str = "The ArrayList is empty";
+                    break;
+                case 1:
+                    str = "This ArrayList only has one item, so it doesn't need to be sorted! :D";
+                    break;
+            }
+            logger.log(Level.INFO, str);
+        }
+        else
+        {
+            logger.log(Level.INFO, listToBeSorted.sort());
+        }
+    }
+        
